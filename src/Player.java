@@ -9,7 +9,8 @@ public class Player {
 
     /**
      * Constructor for player objects
-     * @param ID Player ID it is 1 or -1
+     *
+     * @param ID    Player ID it is 1 or -1
      * @param board The board player game on this
      */
     public Player(int ID, Board board) {

@@ -29,7 +29,10 @@ public class Grid {
      * @param direction This parameter is for clockwise(1) or counter-clockwise(-1)
      */
     public void turn(int direction) {
-        int[][] copy = grid.clone();
+        int[][] copy =new int[3][3];
+        for(int i=0;i<3;i++){
+            for (int j=0;j<3;j++)copy[i][j]=grid[i][j];
+        }
         if (direction == 1) {
             grid[0][2] = copy[0][0];
             grid[1][2] = copy[0][1];
@@ -59,12 +62,13 @@ public class Grid {
 
     /**
      * This function indicates whether this grid has a point or not
+     *
      * @return A boolean
      */
-    public boolean checkFill(){
-        for (int i=0;i<3;i++){
-            for (int j=0;j<3;j++){
-                if(grid[i][j]!=0)return true;
+    public boolean checkFill() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (grid[i][j] != 0) return true;
             }
         }
         return false;
